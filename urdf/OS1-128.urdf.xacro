@@ -61,7 +61,7 @@
       </visual>
     </link>
 
-    <!-- <link name="${imu_link}" />
+    <link name="${imu_link}" />
 
     <link name="${lidar_link}" />
 
@@ -77,8 +77,8 @@
     <joint name="${name}_lidar_link_joint" type="fixed">
       <parent link="${name}" />
       <child link="${lidar_link}" />
-      <origin xyz="0.0 0.0 0.03618" rpy="0 0 0" />
-    </joint> -->
+      <origin xyz="0.0 0.0 0.03618" rpy="0 0 3.142" />
+    </joint>
 
     <!-- Gazebo requires the ouster_gazebo_plugins package -->
     <gazebo reference="${name}">

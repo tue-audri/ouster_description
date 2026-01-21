@@ -1,9 +1,18 @@
 cmake_minimum_required(VERSION 3.5)
 project(ouster_description)
 
-find_package(ament_cmake REQUIRED)
-install(DIRECTORY urdf meshes launch rviz
-        DESTINATION share/${PROJECT_NAME})
+find_package(ament_cmake_auto REQUIRED)
 
-ament_package()
+ament_auto_find_build_dependencies()
 
+ament_auto_package(INSTALL_TO_SHARE
+  urdf
+  meshes
+  launch
+  rviz
+)
+# find_package(ament_cmake REQUIRED)
+# install(DIRECTORY urdf meshes launch rviz
+        # DESTINATION share/${PROJECT_NAME})
+
+# ament_package()
